@@ -1,5 +1,5 @@
 # Heaps Practice
-Based on the Ruby version at [Ada-C11/heaps](https://github.com/Ada-C11/heaps). See also: [AdaGold/heaps](https://github.com/AdaGold/heaps)
+Based on the Ruby version at [Ada-C12/heaps](https://github.com/Ada-C12/heaps). See also: [AdaGold/heaps](https://github.com/AdaGold/heaps)
 
 ## Running
 To run this repo, clone and install it, then run tests. It has been tested with node `12.6.0`.
