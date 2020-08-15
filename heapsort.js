@@ -22,4 +22,4 @@ function heapsort(list) {
 
 module.exports = heapsort;
 
-// console.log(heapsort([5, 27, 3, 16, -50])); 
+console.log(heapsort([5, 27, 3, 16, -50])); 

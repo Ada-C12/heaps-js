@@ -32,6 +32,12 @@ class MinHeap {
       return result
     }
 
+    if (this.size === 1) {
+      result = this.store.pop();
+      return result.value
+    }
+
+
     this.swap(0, this.store.length - 1);
     result = this.store.pop();
     this.heapDown(0)
@@ -96,12 +102,14 @@ class MinHeap {
           this.swap(index, leftChild);
         }
           index = leftChild;
-      }else if (this.store[leftChild].key < this.store[rightChild].key) {
+      }else if (this.store[leftChild].key <= this.store[rightChild].key && this.store[leftChild].key < this.store[index].key) {
         this.swap(index, leftChild);
         index = leftChild;
-      } else {
+      } else if (this.store[leftChild].key > this.store[rightChild].key && this.store[rightChild].key < this.store[index].key){
         this.swap(index, rightChild);
         index = rightChild;
+      } else {
+        return
       }
 
       leftChild = index * 2 + 1;
@@ -116,18 +124,22 @@ class MinHeap {
   }
 }
 
-module.exports = {MinHeap};
+module.exports = MinHeap;
 
 
 // let myHeap = new MinHeap;
-// console.log(myHeap.isEmpty())
+// // console.log(myHeap.isEmpty())
 // myHeap.add(6);
-// console.log(myHeap)
+// // console.log(myHeap)
 // myHeap.add(4);
 // // console.log(myHeap)
-// myHeap.add(5);
+// myHeap.add(7);
 // myHeap.add(3); 
-// console.log(myHeap)
-// myHeap.remove();
-// console.log(myHeap)
-// console.log(myHeap.isEmpty())
+// // console.log(myHeap)
+// console.log(myHeap.remove())
+// console.log(myHeap.remove())
+// console.log(myHeap.remove())
+// console.log(myHeap.remove())
+// console.log(myHeap.remove())
+// // console.log(myHeap.toString())
+// // console.log(myHeap.isEmpty())
